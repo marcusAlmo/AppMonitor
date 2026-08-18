@@ -1,11 +1,11 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { useAppStore } from './store/useAppStore'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { count, increment } = useAppStore()
 
   return (
     <>
@@ -24,7 +24,7 @@ function App() {
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={increment}
         >
           Count is {count}
         </button>

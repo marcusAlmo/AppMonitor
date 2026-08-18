@@ -61,10 +61,10 @@ export function DataTable<T>({
                 key={keyExtractor(item)}
                 onClick={() => onRowClick?.(item)}
                 className={clsx(
-                  'transition-colors duration-150',
+                  'transition-all duration-150 relative border-l-2 border-l-transparent',
                   onRowClick
-                    ? 'cursor-pointer hover:bg-stone-200/50 dark:hover:bg-stone-900/60'
-                    : 'hover:bg-stone-100/50 dark:hover:bg-stone-900/30'
+                    ? 'cursor-pointer hover:bg-stone-200/60 dark:hover:bg-stone-900/80 hover:border-l-teal-500 dark:hover:border-l-teal-400'
+                    : 'hover:bg-stone-100/60 dark:hover:bg-stone-900/40'
                 )}
               >
                 {columns.map((col) => (

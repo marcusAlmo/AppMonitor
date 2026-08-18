@@ -54,14 +54,14 @@ export const ApiCostsDashboard: React.FC = () => {
 
       {/* Metric Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-1">
+        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-[3px_3px_0px_0px_rgba(13,148,136,0.3)]">
           <span className="text-[9px] text-stone-500 uppercase flex items-center gap-1">
             <DollarSign className="w-3 h-3 text-teal-500" /> TOTAL MONTHLY SPEND
           </span>
           <div className="text-2xl font-bold text-stone-900 dark:text-stone-100">${totalSpendMonth.toFixed(2)}</div>
         </div>
 
-        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-1">
+        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-500 dark:hover:border-violet-400 hover:shadow-[3px_3px_0px_0px_rgba(124,58,237,0.3)]">
           <span className="text-[9px] text-stone-500 uppercase flex items-center gap-1">
             <Database className="w-3 h-3 text-violet-500" /> TOTAL TOKENS PROCESSED
           </span>
@@ -70,14 +70,14 @@ export const ApiCostsDashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-1">
+        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-500 dark:hover:border-amber-400 hover:shadow-[3px_3px_0px_0px_rgba(217,119,6,0.3)]">
           <span className="text-[9px] text-stone-500 uppercase flex items-center gap-1">
             <Cpu className="w-3 h-3 text-amber-500" /> AVG COST / TICKET
           </span>
           <div className="text-2xl font-bold text-stone-900 dark:text-stone-100">${avgCostPerTicket.toFixed(2)}</div>
         </div>
 
-        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-1">
+        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-500 dark:hover:border-cyan-400 hover:shadow-[3px_3px_0px_0px_rgba(8,145,178,0.3)]">
           <span className="text-[9px] text-stone-500 uppercase flex items-center gap-1">
             <TrendingUp className="w-3 h-3 text-cyan-500" /> METERED TENANTS
           </span>
@@ -86,7 +86,7 @@ export const ApiCostsDashboard: React.FC = () => {
       </div>
 
       {/* Trend Chart */}
-      <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-3">
+      <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-3 transition-all duration-300 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-[4px_4px_0px_0px_rgba(13,148,136,0.25)]">
         <h2 className="text-xs font-bold uppercase text-stone-600 dark:text-stone-300">
           DAILY COST VELOCITY (USD)
         </h2>

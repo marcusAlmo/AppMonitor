@@ -45,7 +45,7 @@ export const AuroraCage: React.FC<AuroraCageProps> = ({
   return (
     <div
       className={clsx(
-        'relative overflow-hidden border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-950 transition-colors duration-200',
+        'group relative overflow-hidden border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-950 transition-all duration-300 hover:-translate-y-0.5 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-[4px_4px_0px_0px_rgba(13,148,136,0.35)] dark:hover:shadow-[4px_4px_0px_0px_rgba(13,148,136,0.5)]',
         className
       )}
       {...props}
@@ -55,14 +55,14 @@ export const AuroraCage: React.FC<AuroraCageProps> = ({
           {/* Blob 1 */}
           <div
             className={clsx(
-              'absolute top-[-20%] left-[-10%] w-56 h-56 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob pointer-events-none',
+              'absolute top-[-20%] left-[-10%] w-56 h-56 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob pointer-events-none transition-all duration-500 group-hover:scale-125 group-hover:opacity-90',
               colors[0]
             )}
           />
           {/* Blob 2 */}
           <div
             className={clsx(
-              'absolute top-[-20%] right-[-10%] w-56 h-56 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob pointer-events-none',
+              'absolute top-[-20%] right-[-10%] w-56 h-56 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob pointer-events-none transition-all duration-500 group-hover:scale-125 group-hover:opacity-90',
               colors[1]
             )}
             style={{ animationDelay: '2s' }}
@@ -70,7 +70,7 @@ export const AuroraCage: React.FC<AuroraCageProps> = ({
           {/* Blob 3 */}
           <div
             className={clsx(
-              'absolute bottom-[-30%] left-[20%] w-56 h-56 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob pointer-events-none',
+              'absolute bottom-[-30%] left-[20%] w-56 h-56 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob pointer-events-none transition-all duration-500 group-hover:scale-125 group-hover:opacity-90',
               colors[2]
             )}
             style={{ animationDelay: '4s' }}
@@ -80,7 +80,7 @@ export const AuroraCage: React.FC<AuroraCageProps> = ({
 
       {/* Grid overlay for technical grid aesthetic */}
       {showGrid && (
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none transition-opacity duration-300 group-hover:opacity-100 opacity-60" />
       )}
 
       {/* Content wrapper */}

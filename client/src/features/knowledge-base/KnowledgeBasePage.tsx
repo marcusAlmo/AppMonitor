@@ -50,10 +50,10 @@ export const KnowledgeBasePage: React.FC = () => {
                 <button
                   key={art.id}
                   onClick={() => setSelectedArticleId(art.id)}
-                  className={`w-full p-3 text-left transition-colors cursor-pointer flex flex-col gap-1 ${
+                  className={`w-full p-3 text-left transition-all duration-150 cursor-pointer flex flex-col gap-1 border-l-2 ${
                     isSelected
-                      ? 'bg-stone-900 text-stone-50 dark:bg-stone-100 dark:text-stone-900'
-                      : 'hover:bg-stone-200/60 dark:hover:bg-stone-900'
+                      ? 'bg-stone-900 text-stone-50 dark:bg-stone-100 dark:text-stone-900 border-l-teal-500 font-semibold'
+                      : 'border-l-transparent hover:bg-stone-200/70 dark:hover:bg-stone-900 hover:border-l-teal-400 hover:translate-x-0.5'
                   }`}
                 >
                   <div className="flex items-center justify-between">

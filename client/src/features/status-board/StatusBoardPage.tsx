@@ -35,25 +35,25 @@ export const StatusBoardPage: React.FC = () => {
 
       {/* KPI Metrics Strip */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 flex flex-col justify-between">
+        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-500 dark:hover:border-emerald-400 hover:shadow-[3px_3px_0px_0px_rgba(16,185,129,0.3)]">
           <span className="text-[9px] text-stone-500 uppercase">PLATFORM UPTIME</span>
           <span className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mt-2">
             {metrics.uptimePercent}%
           </span>
         </div>
-        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 flex flex-col justify-between">
+        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-[3px_3px_0px_0px_rgba(13,148,136,0.3)]">
           <span className="text-[9px] text-stone-500 uppercase">AVG API LATENCY</span>
           <span className="text-2xl font-bold text-stone-900 dark:text-stone-100 mt-2">
             {metrics.apiLatencyMs} ms
           </span>
         </div>
-        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 flex flex-col justify-between">
+        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-[3px_3px_0px_0px_rgba(13,148,136,0.3)]">
           <span className="text-[9px] text-stone-500 uppercase">ACTIVE DEVIN AGENTS</span>
           <span className="text-2xl font-bold text-teal-600 dark:text-teal-400 mt-2">
             {metrics.activeAgents}
           </span>
         </div>
-        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 flex flex-col justify-between">
+        <div className="p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 hover:border-teal-500 dark:hover:border-teal-400 hover:shadow-[3px_3px_0px_0px_rgba(13,148,136,0.3)]">
           <span className="text-[9px] text-stone-500 uppercase">SYSTEM ERROR RATE</span>
           <span className="text-2xl font-bold text-stone-900 dark:text-stone-100 mt-2">
             {metrics.errorRatePercent}%
@@ -72,11 +72,11 @@ export const StatusBoardPage: React.FC = () => {
             <div
               key={evt.id}
               className={clsx(
-                'p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-2 border-l-4',
-                evt.type === 'operational' && 'border-l-emerald-500',
-                evt.type === 'degraded' && 'border-l-amber-500',
-                evt.type === 'maintenance' && 'border-l-cyan-500',
-                evt.type === 'outage' && 'border-l-rose-500'
+                'p-4 border border-stone-900 dark:border-stone-400 bg-stone-50 dark:bg-stone-900 space-y-2 border-l-4 transition-all duration-200 hover:translate-x-1 hover:shadow-md',
+                evt.type === 'operational' && 'border-l-emerald-500 hover:border-l-emerald-400',
+                evt.type === 'degraded' && 'border-l-amber-500 hover:border-l-amber-400',
+                evt.type === 'maintenance' && 'border-l-cyan-500 hover:border-l-cyan-400',
+                evt.type === 'outage' && 'border-l-rose-500 hover:border-l-rose-400'
               )}
             >
               <div className="flex justify-between items-start gap-4">
